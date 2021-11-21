@@ -31,8 +31,8 @@ import jwt
 g = dict()
 
 # mongo
-mongo_client = MongoClient('mongodb://3.228.80.110:27017/')
-# mongo_client = MongoClient("mongodb+srv://admin:admin@tweets.8ugzv.mongodb.net/tweets?retryWrites=true&w=majority")
+# mongo_client = MongoClient('mongodb://3.228.80.110:27017/')
+mongo_client = MongoClient("mongodb+srv://admin:Password1234@cluster0.4gpa1.mongodb.net/tweets?retryWrites=true&w=majority")
 
 app = Flask(__name__)
 CORS(app)
