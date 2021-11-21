@@ -31,8 +31,8 @@ import jwt
 g = dict()
 
 # mongo
-mongo_client = MongoClient('mongodb://10.0.2.30:27017/')
-# mongo_client = MongoClient("mongodb+srv://admin:admin@tweets.8ugzv.mongodb.net/tweets?retryWrites=true&w=majority")
+# mongo_client = MongoClient('mongodb://3.228.80.110:27017/')
+mongo_client = MongoClient("mongodb+srv://admin:Password1234@cluster0.4gpa1.mongodb.net/tweets?retryWrites=true&w=majority")
 
 app = Flask(__name__)
 CORS(app)
@@ -423,15 +423,15 @@ def add_tweet():
     private = request.json['private']
     pic = request.json['pic']
 
-    access_token = request.json['access-token']
-    print("access_token:", access_token)
-    permission = verify_token(access_token)
-    if not permission[0]: 
-        print("tweet submission denied due to invalid token!")
-        print(permission[1])
-        return permission[1]
-    else:
-        print('access token accepted!')
+    # access_token = request.json['access-token']
+    # print("access_token:", access_token)
+    # permission = verify_token(access_token)
+    # if not permission[0]: 
+    #     print("tweet submission denied due to invalid token!")
+    #     print(permission[1])
+    #     return permission[1]
+    # else:
+    #     print('access token accepted!')
 
     tweet = dict(user=user, description=description, private=private,
                 upvote=0, date=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
