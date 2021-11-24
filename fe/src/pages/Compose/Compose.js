@@ -98,8 +98,7 @@ const Compose = () => {
       }
       console.log("Compose.js: fetching from " + `${process.env.REACT_APP_API_SERVICE_URL}/tweet`)
       const response = await fetch(`${process.env.REACT_APP_API_SERVICE_URL}/tweet`, config);
-      // const response = await fetch(`tweet`, config);
-      //const json = await response.json()
+      
       if (response.ok) {
           //return json
           //return response
@@ -132,7 +131,7 @@ const Compose = () => {
     event.preventDefault()
 
     const priv = true;
-    //const username = 'Elon Musk';
+  
     const myArray = [
       "women",
       "men"

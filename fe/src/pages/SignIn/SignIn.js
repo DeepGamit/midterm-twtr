@@ -106,8 +106,6 @@ const SignIn = () => {
   function handleSubmit(event) {
     event.preventDefault()
 
-    //console.log(username);
-    //console.log(password);
     const paramdict = {
       'name': username,
       'password': password
@@ -124,8 +122,6 @@ const SignIn = () => {
     console.log(paramdict);
 
     console.log("Signin.js: fetching from " + `${process.env.REACT_APP_API_SERVICE_URL}/login`)
-    // verify user/pwd, get encoded userid as access and refresh tokens in return
-    //fetch("http://localhost:5000/login", config)
     fetch(`${process.env.REACT_APP_API_SERVICE_URL}/login`, config)
     // fetch(`login`, config)
       .then(response => response.json())
